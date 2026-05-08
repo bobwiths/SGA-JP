@@ -2,10 +2,11 @@ using System.Dynamic;
 
 public class MenuModulos
 {
-    CadastroAluno cadastroAluno = new CadastroAluno();
-    ListagemAlunos listagemAlunos = new ListagemAlunos();
-    AlteracaoCadastroAluno alteracaoCadastroAluno = new AlteracaoCadastroAluno();
-    ExclusaoAluno exclusaoAluno = new ExclusaoAluno();
+    // CadastroAluno cadastroAluno = new CadastroAluno();
+    // ListagemAlunos listagemAlunos = new ListagemAlunos();
+    // AlteracaoCadastroAluno alteracaoCadastroAluno = new AlteracaoCadastroAluno();
+    // ExclusaoAluno exclusaoAluno = new ExclusaoAluno();
+    AlunoService alunoService = new AlunoService();
     public void ModulosSistema()
     {
         Console.Clear();
@@ -13,32 +14,32 @@ public class MenuModulos
         do
         {
             Console.WriteLine("--- Sistema de Gestao de Alunos - SGA ---");
-            Console.WriteLine("\nDigite: \n1 - Cadastro de novos alunos \n2 - Listagem dos alunos cadastrados \n3 - Alteração cadastral dos alunos \n4 - Exclusão de alunos \n0 - Sair do Sistema");
+            Console.WriteLine("\nDigite: \n\n1 - Cadastro de novos alunos \n2 - Listagem dos alunos cadastrados \n3 - Alteração cadastral dos alunos \n4 - Exclusão de alunos \n0 - Sair do Sistema");
             escolhaModulo = Convert.ToInt32(Console.ReadLine());
             quebraLinha();
             switch (escolhaModulo)
             {
                 case 1:
                 quebraLinha();
-                cadastroAluno.CadastrandoNovoAluno();
+                alunoService.CadastrarAluno();
                 quebraLinha();
                 break;
 
                 case 2:
                 quebraLinha();
-                listagemAlunos.ListandoAlunos();
+                alunoService.ListarAlunos();
                 quebraLinha();
                 break;
 
                 case 3:
                 quebraLinha();
-                alteracaoCadastroAluno.AlterandoCadastroAluno();
+                alunoService.AlterarAluno();
                 quebraLinha();
                 break;
 
                 case 4:
                 quebraLinha();
-                exclusaoAluno.ExcluindoAluno();
+                alunoService.RemoverAluno();
                 quebraLinha();
                 break;
             }
