@@ -36,7 +36,7 @@ public class MenuModulos
 
                 case 3:
                 quebraLinha();
-                alteracaoCadastroAluno.alteracaoCadastroAluno();
+                alteracaoCadastroAluno.AlterandoCadastroAluno();
                 quebraLinha();
                 break;
 
